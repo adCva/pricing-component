@@ -1,0 +1,80 @@
+* {
+    --active-card-bg: rgb(163,168,240);
+    --active-card-gradient: linear-gradient(170deg, rgba(163,168,240,1) 0%, rgba(105,111,221,1) 50%);
+
+    --very-light-grayish-blue: #f6f6fe;
+    --light-grayish-blue: #b3b5c6;
+    --grayish-blue: #6d708d;
+    --dark-grayish-blue: #494c5f;
+
+    --ff-main: 'Montserrat', sans-serif;
+    --fs-body: 15px;
+    --fw-bold: 700;
+}
+
+body {
+    font-family: var(--ff-main);
+    font-size: var(--fs-body);
+}
+
+
+
+/* ============================= App Container ============================= */
+.App {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.App h1 {
+    color: var(--dark-grayish-blue);
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+
+
+
+/* ============================= Toggle Container ============================= */
+.toggle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0 3rem;
+}
+
+.toggle-container p {
+    color: var(--light-grayish-blue);
+    font-size: 14px;
+}
+
+
+
+/* ============================= Toggle Button ============================= */
+.toggle-btn {
+    background: rgb(163,168,240);
+    background: linear-gradient(170deg, rgba(163,168,240,1) 0%, rgba(105,111,221,1) 64%);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 0.1rem;
+    width: 45px;
+    height: 24px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
+
+.toggle-btn::after {
+    content: "";
+    display: block;
+    background-color: #ffffff;
+    height: 18px;
+    width: 18px;
+    border-radius: 50px;
+}
+
+.toggle-btn-left {
+    background: rgb(231,232,249);
+    background: linear-gradient(170deg, rgba(231,232,249,1) 0%, rgba(187,190,240,1) 64%);
+    justify-content: flex-start;
+}
