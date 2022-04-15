@@ -24,6 +24,13 @@ body {
 .App {
     text-align: center;
     padding: 4rem 0;
+    background-image: url("./Assets/bg-top.svg"), url("./Assets/bg-bottom.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50vw;
+    background-position-x: 60vw, 0;
+    background-position-y: 0, 100%;
 }
 
 .App h1 {
@@ -83,7 +90,15 @@ body {
 
 
 /* ============================= Media Q ============================= */
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
+    .App {
+        height: 100vh;
+        background-size: 17vw, 20vw;
+        background-position-x: 90vw, 0;
+        background-position-y: 0, 100%;
+    }
+
+
     /* ========= Toggle button ========= */
     .toggle-btn {
         width: 48px;

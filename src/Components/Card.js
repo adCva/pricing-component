@@ -1,16 +1,19 @@
 import React from 'react';
 import styled from "styled-components";
 
+
 function Card(props) {
   return (
     <CardComponent highlited={props.highlightCard}>
       <h4>{props.cardTitle}</h4>
       <h1><span>$</span>{props.cardPrice}</h1>
+      {/* ================== Package details component. ================== */}
       <PackageDetails highlited={props.highlightCard}>
         <p>{props.cardDetails[0]}</p>
         <p>{props.cardDetails[1]}</p>
         <p>{props.cardDetails[2]}</p>
       </PackageDetails>
+
       <button>Learn more</button>
     </CardComponent>
   )
@@ -20,6 +23,7 @@ export default Card;
 
 
 
+// ================== Card component.
 const CardComponent = styled.div`
   background: ${({highlited}) => (highlited ? 'rgb(163,168,240)' : "#ffffff")} ;
   background: ${({highlited}) => (highlited ? 'linear-gradient(148deg, rgba(163,168,240,1) 0%, rgba(105,111,221,1) 62%)' : "#ffffff")} ;
@@ -29,11 +33,13 @@ const CardComponent = styled.div`
   border-radius: 10px;
   box-shadow: ${({highlited}) => (highlited ? "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px" : "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px")};
 
-  @media (min-width: 768px) {
+  @media (min-width: 1000px) {
     margin: 0;
-    padding: ${({highlited}) => (highlited ? "3rem 1.5rem" : "2rem 1.5rem")};
+    padding: ${({highlited}) => (highlited ? "3.5rem 1.5rem" : "2.5rem 1.5rem")};
   }
 
+
+  // ========= h4.
   h4 {
     color: ${({highlited}) => (highlited ? "#ffffff" : "var(--grayish-blue)")};
     font-size: 14px;
@@ -45,6 +51,8 @@ const CardComponent = styled.div`
     }
   }
 
+
+  // ========= h1.
   h1 {
     display: flex;
     justify-content: center;
@@ -59,6 +67,8 @@ const CardComponent = styled.div`
     }
   }
 
+
+  // ========= button.
   button {
     width: 100%;
     height: 40px;
@@ -69,7 +79,7 @@ const CardComponent = styled.div`
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    border: none;
+    border: 1px solid transparent;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.35s ease-in-out;
@@ -82,6 +92,8 @@ const CardComponent = styled.div`
   }
 `
 
+
+// ================== Package details component.
 const PackageDetails = styled.div`
   p {
     color: ${({highlited}) => (highlited ? "#ffffff" : "var(--grayish-blue)")};
